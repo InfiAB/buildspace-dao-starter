@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
+import { ethers } from "ethers";
 
 import { useWeb3 } from "@3rdweb/hooks";
 import { ThirdwebSDK } from "@3rdweb/sdk";
@@ -7,6 +8,10 @@ const sdk = new ThirdwebSDK("rinkeby");
 
 const bundleDropModule = sdk.getBundleDropModule(
   "0xFcB95C9AE4B2c42FB87a75017F23EB7fD4ed5E51",
+);
+
+const tokenModule = sdk.getTokenModule(
+  "0x5EcD75268029D1427dBa5c8e853F37f4aAb23B9d",
 );
 
 const App = () => {
@@ -20,6 +25,8 @@ const App = () => {
   const [hasClaimedNFT, setHasClaimedNFT] = useState(false);
   // isClaiming lets us easily keep a loading state while the NFT is minting.
   const [isClaiming, setIsClaiming] = useState(false);
+
+  // 
 
   // Another useEffect!
   useEffect(() => {
