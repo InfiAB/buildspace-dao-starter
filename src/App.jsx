@@ -14,6 +14,10 @@ const tokenModule = sdk.getTokenModule(
   "0x14997B453d505144e7Ad11AC69544FA84c9ADcE2",
 );
 
+const voteModule = sdk.getVoteModule(
+  "0x674152B61eBD69792Dd41AD077D9367862103715",
+);
+
 const App = () => {
   const { connectWallet, address, error, provider } = useWeb3();
   console.log("👋 Address:", address)
