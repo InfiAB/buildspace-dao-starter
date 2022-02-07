@@ -11,7 +11,7 @@ const bundleDropModule = sdk.getBundleDropModule(
 );
 
 const tokenModule = sdk.getTokenModule(
-  "0x5EcD75268029D1427dBa5c8e853F37f4aAb23B9d",
+  "0x14997B453d505144e7Ad11AC69544FA84c9ADcE2",
 );
 
 const App = () => {
